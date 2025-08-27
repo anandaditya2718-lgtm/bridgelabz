@@ -51,6 +51,8 @@ public class RailwayReservation {
                 }
             }
 
+            
+
             System.out.println("\nTotal Seats Booked: " + booked);
             System.out.println("Seats Left: " + (seats - booked));
             System.out.println("Waiting List Left: " + waitingList);
