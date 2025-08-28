@@ -1,5 +1,5 @@
 import java.util.Scanner;
-    public class Shooping {
+    public class Online Shopping Cart System {
         public static void main(String[] args) {
             Scanner sc = new Scanner(System.in);
             boolean moreCustomers = true;
