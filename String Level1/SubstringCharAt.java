@@ -10,6 +10,7 @@ public class Q2 {
 
         return result;
     }
+    
 
     static boolean compareUsingCharAt(String s1, String s2) {
         if (s1.length() != s2.length()) {
