@@ -1,7 +1,7 @@
 import java.util.*;
 
 class Q1 {
-    static int getLength(String text) {
+    static int GetLength(String text) {
         int count = 0;
         try {
             while (true) {
