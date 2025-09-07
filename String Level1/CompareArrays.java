@@ -11,7 +11,7 @@ public class Q3 {
         return arr;
     }
 
-    static boolean compareArrays(char[] a, char[] b) {
+    static boolean CompareArrays(char[] a, char[] b) {
         if (a.length != b.length) {
             return false;
         } else {
