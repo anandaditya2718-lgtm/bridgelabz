@@ -1,18 +1,38 @@
-import java.util.*;
+import java.util.Scanner;
 
-class Q3 {
+public class LargestDigits {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter number");
-        int num = sc.nextInt();
-        int[] table = new int[10];
+        System.out.print("Enter a number: ");
+        int number = sc.nextInt();
 
-        for (int i = 1; i <= 10; i++) {
-            table[i - 1] = num * i;
+        int maxDigit = 10;
+        int[] digits = new int[maxDigit];
+        int index = 0;
+        int temp = number;
+
+        while (temp != 0) {
+            if (index == maxDigit) {
+                break;
+            }
+            digits[index] = temp % 10;
+            temp /= 10;
+            index++;
         }
 
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(num + " * " + i + " = " + table[i - 1]);
+        int largest = 0;
+        int secondLargest = 0;
+
+        for (int i = 0; i < index; i++) {
+            if (digits[i] > largest) {
+                secondLargest = largest;
+                largest = digits[i];
+            } else if (digits[i] > secondLargest && digits[i] != largest) {
+                secondLargest = digits[i];
+            }
         }
+
+        System.out.println("Largest digit: " + largest);
+        System.out.println("Second largest digit: " + secondLargest);
     }
 }
